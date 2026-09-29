@@ -19,24 +19,33 @@
 
 # Summary 
 
-###  EU AI Act Regulation,Annex I Machinery / Product Directives (Product Safety Laws),"EU AI Act (Articles 6, 8–15, 50, 80) (Harmonized Law)",
+###  EU AI Act Regulation
+* Previous : Annex I Machinery / Product Directives (Product Safety Laws)
+* New Standard : EU AI Act (Articles 6, 8–15, 50, 80) (Harmonized Law)
 * "Shift from static product safety to continuous lifecycle risk management, dataset governance, and human oversight.
 * High-Risk designation requiring Notified Body involvement, third-party conformity assessments, and technical documentation (Annex IV).
  
-### Industrial Heavy Machinery,IEC 61508 / ISO 13849 / IEC 62061 (SIL 1–4 / PL a–e),ISO/IEC TR 5469 (Functional safety and AI systems)
+### Industrial Heavy Machinery
+* Previous : IEC 61508 / ISO 13849 / IEC 62061 (SIL 1–4 / PL a–e),
+* New Standard : ISO/IEC TR 5469 (Functional safety and AI systems)
 * Replaces single-block execution with Safety Architecture Patterns (DNN + Deterministic SIL 3 rule-based monitor/wrapper)
 * DNN outputs are constrained by a deterministic hardware/software safety barrier certified to high SIL levels.
 
-### Automotive,ISO 26262 (ASIL A–D),ISO 21448 (SOTIF) & ISO/PAS 8800
+### Automotive
+* Previous : ISO 26262 (ASIL A–D)
+* New Standard : ISO 21448 (SOTIF) & ISO/PAS 8800
 * Shift from hardware/software fault elimination to managing performance insufficiencies and ODD triggering conditions.
 * Third-Party SOTIF process audits (e.g., TÜV), SOTIF Safety Case assessments, and UN R157/EU 2022/1426 vehicle type-approval.
 
-### Aviation & Aerospace,DO-178C / ED-12C (DAL A–E),EUROCAE ED-324 / SAE ARP6983 & EASA AI Roadmap
+### Aviation & Aerospace
+* Previous : DO-178C / ED-12C (DAL A–E)
+* New Standard : EUROCAE ED-324 / SAE ARP6983 & EASA AI Roadmap
 * Shift from 100% Structural Code Coverage (MC/DC) to Learning Assurance (Data Coverage, Data Completeness, Bias Mitigation).
 * Restricting AI to maximum DAL C initial deployment; requiring runtime deterministic safeguards and explainability metrics.
 
-### Medical Devices (SaMD),IEC 62304 & ISO 14971 (Safety Classes A–C)
-* FDA PCCP, Good Machine Learning Practice (GMLP), AAMI TIR34971
+### Medical Devices (SaMD)
+* Previous : IEC 62304 & ISO 14971 (Safety Classes A–C)
+* New Standard : FDA PCCP, Good Machine Learning Practice (GMLP), AAMI TIR34971
 * Shift from static, one-time software releases to Monitored Algorithmic Evolution and data drift management.
 * Predetermined Change Control Plans (PCCP) pre-authorizing adaptive algorithm updates without requiring full re-clearance.
 
