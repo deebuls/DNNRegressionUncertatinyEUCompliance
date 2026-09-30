@@ -35,6 +35,7 @@
 * Previous : ISO 26262 (ASIL A–D)
 * New Standard : ISO 21448 (SOTIF) & ISO/PAS 8800
 * Shift from hardware/software fault elimination to managing performance insufficiencies and ODD triggering conditions.
+* SOTIF addresses what happens when the DNN operates perfectly according to code, but still fails due to sensor limitations, environment edge cases, or AI generalization boundaries.
 * Third-Party SOTIF process audits (e.g., TÜV), SOTIF Safety Case assessments, and UN R157/EU 2022/1426 vehicle type-approval.
 
 ### Aviation & Aerospace
@@ -48,6 +49,24 @@
 * New Standard : FDA PCCP, Good Machine Learning Practice (GMLP), AAMI TIR34971
 * Shift from static, one-time software releases to Monitored Algorithmic Evolution and data drift management.
 * Predetermined Change Control Plans (PCCP) pre-authorizing adaptive algorithm updates without requiring full re-clearance.
+
+
+
+
+
+# Paper structure 
+Structure the paper around three topics: 
+1. System Architecture,
+2. Compliance Mapping, and
+3. Experimental Validation.
+
+| Regulation / Standard | Standard Requirement                           | Single-Pass NLL Equivalent Metric                                                     | System Action                                         |
+|-----------------------|------------------------------------------------|---------------------------------------------------------------------------------------|-------------------------------------------------------|
+| EU AI Act (Art. 15)   | Resiliency against OOD / corrupted data        | Variance thresholding: $\sigma^2_{total} > \tau_{OOD}$                                | Trigger system audit log & degrade capability         |
+| ISO 21448 (SOTIF)     | Boundary check for Area 3 (Unknown Unsafe)     | $3\sigma$ Spatial Margin: $[\mu - 3\sigma, \mu + 3\sigma] \subset \text{Safety Zone}$ | Halt docking if safety zone is breached               |
+| ISO/PAS 8800          | Runtime ML Performance Insufficiency Detection | Epistemic/Aleatoric split via Evidential NLL                                          | Trigger Minimal Risk Maneuver (MRM)                   |
+| ISO/IEC TR 5469       | Non-deterministic risk mitigation              | Deterministic Single-Pass Execution Profile                                           | Pass timing & WCET (Worst-Case Execution Time) checks |
+
 
 # Papers
 
