@@ -5,8 +5,20 @@
 2. Domain-Specific Safety Architecture (Systems / Engineering Paper)
   * Safety-Aware Control Loops: Integrating Evidential DNN Regression into ISO 26262/SOTIF Architecture for Heavy Machinery
     - GSN template showing how uncertaitny satisfies EU AIT act article 14 robustness and 15 human oversight
-   
-# EU AI ACt articles
+
+## The GSN claim
+“Validated per-output uncertainty estimates provide evidence that the system can identify potentially unreliable predictions and apply an appropriate mitigation, contributing to the argument for robustness under Article 15.”
+
+### Why uncertainty is evidence for robustness
+Because of following tests
+1. Calibration: predicted confidence corresponds reasonably to observed correctness.
+2. Discrimination: uncertain outputs are more likely to be wrong than confident outputs.
+3. Defined thresholds: the system rejects, escalates, or requests human review below an uncertainty threshold.
+4. Robustness testing: uncertainty remains informative under noise, distribution shift, edge cases, faults, and adversarial inputs.
+5. Lifecycle monitoring: calibration and performance are rechecked after updates or deployment.
+
+
+# EU AI Act articles
 ## Chapter II (Articles 8–15) requirements for high-risk AI, including:
 * Article 9 (Risk Management System): Continuous hazard analysis integrated into your functional safety lifecycle.
 * Article 10 (Data and Data Governance): Strict standards for dataset quality, validation, and mitigation of visual detection biases.
@@ -78,4 +90,8 @@ Estimation and Safety Less Uncertain ](https://past.date-conference.com/proceedi
 
 3. [The Dilemma of Uncertainty Estimation for General Purpose AI in the European
 Union Artificial Intelligence Act ] (https://arxiv.org/pdf/2408.11249)
+
+4. https://arxiv.org/html/2512.13907v1 
+    R2.4: Accuracy & Uncertainty : ISACA manual (Sec. 1.4.3) : M2.7: Model calibration — Review whether confidence scores are appropriately aligned with model performance. 
+    
 
